@@ -16,3 +16,35 @@ This project will be split into 4 parts:
 # Part 1: Obtain the data
 
 I web-scraped ebay.com for a single item’s “available” sale history. Ebay keeps records of sold listings for up to 90days, so it’s better for our tests to pick a popular item with many sold listings. The search result lists fifty postings per page by most recent postings first. Each individual listing contains a url to the specific posting site, the sell price,  the color, condition, the unit number, the region, sell tome, and title of listing.
+
+On this project I will be focusing on sale history of the Gameboy Color. I will be focusing on the following attributes to see if they play a role on the items fluctuating price:
+
+```
+    data = { 
+        'title': title,
+        'price': price,
+        'currency':currency,
+        'shipping':shipping,
+        'date_time':date_time,
+        'condition':condition,
+        'location':location,
+        'region_code':region_code,
+        'color':color
+    }
+```
+
+The following atrributes were scrapped using beatutifulsoup and regex libraries to access the ebay website. The entire dataset is stored in a csv file.
+
+# Part 2: Exploratory Data Analysis
+
+To determine the importance of each feature, I ran an exploratory data analsys looking at the distrubution of each feature. I used Tablau and matplotlib libraries to create my visualizations:
+
+[image1]
+[image2]
+[image3]
+
+# Part 3: Logistic Regression model
+
+After running an EDA to get a better understanding of my data. I chose and engioneered the following key features to run on my logistic regressions model:
+
+
